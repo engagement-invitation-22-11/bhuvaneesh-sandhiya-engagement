@@ -60,6 +60,8 @@ button,a{font:inherit}
  border-radius:240px 240px 32px 32px;
  padding:0 32px 108px;
  background:
+   radial-gradient(circle at 30px 30px,#d4a84308 1.5px,transparent 2px) 0 0/30px 30px,
+   radial-gradient(circle at 15px 15px,#d4a84305 1px,transparent 1.5px) 0 0/30px 30px,
    radial-gradient(ellipse at 50% 0%,#fffef8 0%,#fdf8ee 45%,#f5ecce 100%);
  border:1.5px solid var(--gold);
  box-shadow:
@@ -116,21 +118,17 @@ button,a{font:inherit}
 
 h1{font-family:"Cinzel",Georgia,serif;
  font-size:clamp(38px,8.5vw,70px);font-weight:600;line-height:1.0;text-align:center;margin:0;letter-spacing:.04em;
- background:linear-gradient(160deg,
-   var(--gold3) 0%,
-   var(--gold) 20%,
-   var(--gold2) 35%,
-   #fff8d0 50%,
-   var(--gold2) 65%,
-   var(--gold) 80%,
-   var(--gold3) 100%) 200% 0/400% 100%;
- -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
- animation:shine 8s ease-in-out infinite;
- filter:drop-shadow(0 2px 8px #d4a84344)}
-@keyframes shine{0%,20%{background-position:200% 0}80%,100%{background-position:-50% 0}}
+ color:#7a0c2e;
+ text-shadow:0 1px 0 #fff8,0 2px 12px #7a0c2e22;
+ -webkit-text-fill-color:#7a0c2e}
 
 .amp{font-family:"Cinzel",serif;font-size:26px;color:var(--gold);text-align:center;margin:12px 0;
  text-shadow:0 0 20px #d4a84366;letter-spacing:.2em}
+.name-rule{height:1px;margin:6px auto;width:60%;
+ background:linear-gradient(90deg,transparent,var(--gold),var(--gold3),var(--gold),transparent);
+ position:relative}
+.name-rule:before{content:"✦";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+ font-size:9px;color:var(--gold);background:var(--paper);padding:0 6px;line-height:1}
 
 .subtitle{text-align:center;color:var(--muted);font-size:17px;line-height:1.8;margin:18px auto 24px;max-width:500px;font-family:"Cormorant Garamond",Georgia,serif}
 .subtitle strong{color:var(--ink);font-weight:400}
@@ -348,6 +346,51 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
 @keyframes gdrift{0%{transform:translateY(0) translateX(0) scale(1);opacity:0}
  10%{opacity:.8}90%{opacity:.4}100%{transform:translateY(-100vh) translateX(var(--dx,20px)) scale(0);opacity:0}}
 
+/* ── ROYAL VERSE ── */
+.royal-verse{text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;
+ font-size:clamp(14px,3.5vw,17px);color:var(--gold3);letter-spacing:.04em;
+ line-height:1.7;margin:6px 0 14px;opacity:.9}
+
+/* ── WAX SEAL ── */
+.wax-seal{display:flex;justify-content:center;margin-top:20px;
+ filter:drop-shadow(0 0 18px #9b1c4255)}
+
+/* ── GOPURAM SKYLINE ── */
+.gopuram-skyline{filter:drop-shadow(0 4px 12px #d4a84322)}
+
+/* ── KOLAM CORNERS ── */
+.kolam-corners{position:absolute;top:20px;left:0;right:0;display:flex;justify-content:space-between;padding:0 16px;pointer-events:none}
+.kc{opacity:.7}
+
+/* ── FAMILY CARD ICON RING ── */
+.family-ring{width:60px;height:60px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;
+ background:radial-gradient(circle at 35% 30%,#fffef5,#f5e0a0);
+ border:1.5px solid var(--gold);
+ box-shadow:0 0 0 3px #fdf8ee,0 0 0 4px var(--gold3),0 4px 16px #d4a84322}
+
+/* ── DATE HERO ── */
+.date-hero{text-align:center;max-width:440px;width:100%;
+ background:linear-gradient(160deg,#fffef5,#fdf4d8 60%,#f5e8b8);
+ border:1px solid var(--gold3);border-radius:28px;padding:36px 24px 32px;
+ box-shadow:0 0 0 4px #fdf8ee,0 0 0 5px var(--gold3),0 16px 60px #00000018,inset 0 1px 0 #fff8;
+ position:relative;overflow:hidden}
+.date-hero:before{content:"✦";position:absolute;top:14px;left:18px;color:var(--gold);font-size:13px;opacity:.6}
+.date-hero:after{content:"✦";position:absolute;top:14px;right:18px;color:var(--gold);font-size:13px;opacity:.6}
+.date-hero-month{font:700 11px "Cinzel",sans-serif;letter-spacing:.5em;text-transform:uppercase;
+ color:var(--crimson);margin-bottom:2px}
+.date-hero-arc{display:flex;justify-content:center;margin:-4px 0 -8px}
+.date-hero-num{font-family:"Cinzel",serif;font-size:clamp(120px,28vw,180px);font-weight:600;
+ line-height:.9;margin:0;letter-spacing:-.02em;
+ background:linear-gradient(160deg,var(--gold3) 0%,var(--gold) 30%,var(--gold2) 50%,var(--gold) 70%,var(--gold3) 100%);
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+ filter:drop-shadow(0 4px 16px #d4a84344)}
+.date-hero-divider{display:flex;justify-content:center;margin:8px 0 16px}
+.date-hero-time{display:flex;flex-direction:column;align-items:center;gap:4px}
+.date-hero-clock{font-family:"Cinzel",serif;font-size:22px;letter-spacing:.08em;
+ background:linear-gradient(135deg,var(--gold3),var(--gold));
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.date-hero-sub{font-family:"Cormorant Garamond",serif;font-size:15px;font-style:italic;color:var(--muted)}
+
 /* ── MOBILE ── */
 @media(max-width:540px){
  .page{padding:18px 18px 36px}.page:before{left:6px}.page:after{right:6px}
@@ -408,9 +451,22 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
  border:1.5px solid var(--gold);border-radius:220px 220px 28px 28px;
  padding:0 28px 80px;
  background:radial-gradient(ellipse at 50% 0%,#fffef8 0%,#fdf8ee 45%,#f5ecce 100%);
- box-shadow:0 0 0 4px var(--ivory),0 0 0 5.5px var(--gold),0 0 0 9px var(--ivory),
-   0 0 0 10.5px var(--gold3),0 40px 120px #0008,0 0 80px #d4a84322,
+ box-shadow:
+   0 0 0 3px var(--ivory),
+   0 0 0 4.5px var(--gold),
+   0 0 0 7px var(--ivory),
+   0 0 0 8.5px var(--crimson),
+   0 0 0 11px var(--ivory),
+   0 0 0 12.5px var(--gold),
+   0 0 0 16px var(--ivory),
+   0 0 0 17px var(--gold3),
+   0 40px 120px #0008,0 0 80px #d4a84322,
    inset 0 0 0 8px #fffef8,inset 0 0 0 9.5px #e8c87a44}
+.hero-card{position:relative;overflow:hidden}
+.hero-card:after{content:"";position:absolute;top:0;bottom:0;left:-80%;width:50%;
+ background:linear-gradient(100deg,transparent,#d4a84309,transparent);
+ transform:skewX(-15deg);animation:foil 8s ease-in-out infinite;pointer-events:none}
+@keyframes foil{0%,40%{left:-80%}70%,100%{left:140%}}
 
 /* ── FAMILIES section ── */
 .families-intro{text-align:center;margin-bottom:32px}
@@ -421,11 +477,14 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
 .families-intro h2 em{font-style:italic;color:var(--crimson)}
 .family-cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;max-width:680px;width:100%}
 .family-card{flex:1;min-width:240px;max-width:300px;
- background:white;border-radius:24px;padding:28px 22px;text-align:center;
- box-shadow:0 4px 32px #00000010,0 1px 0 #d4a84322 inset;
- border:1px solid #e8d8a844;position:relative;overflow:hidden}
-.family-card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
- background:linear-gradient(90deg,var(--gold3),var(--gold),var(--gold3))}
+ background:linear-gradient(160deg,#fffef8 0%,#fdf8ee 60%,#f9f0d8 100%);
+ border-radius:24px;padding:28px 22px;text-align:center;
+ box-shadow:0 0 0 1px #e8d8a8,0 0 0 3px #fdf8ee,0 0 0 4px var(--gold3),0 8px 40px #00000018;
+ border:none;position:relative;overflow:hidden}
+.family-card:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
+ background:linear-gradient(90deg,var(--crimson),#9b1c42,var(--crimson))}
+.family-card:after{content:"";position:absolute;top:5px;left:0;right:0;height:2px;
+ background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .family-card .role{font:600 9px "Cinzel",sans-serif;letter-spacing:.3em;text-transform:uppercase;
  color:var(--muted);margin-bottom:12px;display:block}
 .family-card .name-big{font-family:"Cinzel",Georgia,serif;font-size:clamp(22px,5vw,32px);
@@ -521,16 +580,20 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
 
 /* Countdown */
 .timer{display:flex;justify-content:center;gap:12px;margin:0 0 32px}
-.timebox{min-width:76px;padding:16px 10px 12px;border-radius:16px;
- background:linear-gradient(160deg,#fdf8ee,#f5e8c8);
- border:1px solid var(--gold3);
- box-shadow:0 0 0 1px #f7f0dc,0 0 0 2px var(--gold3),0 8px 24px #00000014,inset 0 1px 0 #fffcf0;
+.timebox{min-width:76px;padding:18px 10px 12px;border-radius:6px;
+ background:linear-gradient(180deg,#1e0a30 0%,#0d0520 100%);
+ box-shadow:0 0 0 1px var(--gold3),0 0 0 3px #0d0520,0 0 0 4px var(--gold3),
+   0 8px 32px #00000044,inset 0 1px 0 #d4a84322;
  position:relative}
-.timebox:before{content:"";position:absolute;top:-1px;left:20%;right:20%;height:2px;
+.timebox:before{content:"";position:absolute;top:-1px;left:15%;right:15%;height:2px;
  background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:2px}
+.timebox:after{content:"";position:absolute;bottom:-1px;left:15%;right:15%;height:2px;
+ background:linear-gradient(90deg,transparent,var(--gold3),transparent);border-radius:2px}
 .timebox b{display:block;font-family:"Cinzel",serif;font-size:30px;font-weight:400;
- background:linear-gradient(160deg,var(--gold3),var(--gold),var(--gold2));
- -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+ background:linear-gradient(160deg,var(--gold3),var(--gold),var(--gold2),var(--gold));
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+ text-shadow:0 0 20px #d4a84344}
+.timebox span{color:#d4a84388!important}
 .timebox b.flip{animation:flip .5s ease-out}
 @keyframes flip{0%{transform:rotateX(90deg);opacity:0}100%{transform:none;opacity:1}}
 .timebox span{font:600 8px "Cinzel",Arial,sans-serif;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
@@ -646,15 +709,15 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
       <div class="toran-wrap"><svg class="toran-svg" viewBox="0 0 600 70" aria-hidden="true"><path d="M0 6H600" stroke="#b7a16d" stroke-width="2"/><path d="M30 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(30 14) scale(.85)"/><use href="#mg" transform="translate(30 27) scale(.85)"/><use href="#mg" transform="translate(30 40) scale(.85)"/><path d="M66 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#lfu" transform="translate(66 8) rotate(180) scale(.9)"/><use href="#mg" transform="translate(66 44) scale(.75)"/><path d="M102 6V28" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(102 14) scale(.85)"/><use href="#mg" transform="translate(102 28) scale(.85)"/><path d="M138 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(138 14) scale(.85)"/><use href="#mg" transform="translate(138 27) scale(.85)"/><use href="#mg" transform="translate(138 40) scale(.85)"/><path d="M174 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#lfu" transform="translate(174 8) rotate(180) scale(.9)"/><use href="#mg" transform="translate(174 44) scale(.75)"/><path d="M210 6V28" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(210 14) scale(.85)"/><use href="#mg" transform="translate(210 28) scale(.85)"/><path d="M246 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(246 14) scale(.85)"/><use href="#mg" transform="translate(246 27) scale(.85)"/><use href="#mg" transform="translate(246 40) scale(.85)"/><path d="M282 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#lfu" transform="translate(282 8) rotate(180) scale(.9)"/><use href="#mg" transform="translate(282 44) scale(.75)"/><path d="M318 6V28" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(318 14) scale(.85)"/><use href="#mg" transform="translate(318 28) scale(.85)"/><path d="M354 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(354 14) scale(.85)"/><use href="#mg" transform="translate(354 27) scale(.85)"/><use href="#mg" transform="translate(354 40) scale(.85)"/><path d="M390 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#lfu" transform="translate(390 8) rotate(180) scale(.9)"/><use href="#mg" transform="translate(390 44) scale(.75)"/><path d="M426 6V28" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(426 14) scale(.85)"/><use href="#mg" transform="translate(426 28) scale(.85)"/><path d="M462 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(462 14) scale(.85)"/><use href="#mg" transform="translate(462 27) scale(.85)"/><use href="#mg" transform="translate(462 40) scale(.85)"/><path d="M498 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#lfu" transform="translate(498 8) rotate(180) scale(.9)"/><use href="#mg" transform="translate(498 44) scale(.75)"/><path d="M534 6V28" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(534 14) scale(.85)"/><use href="#mg" transform="translate(534 28) scale(.85)"/><path d="M570 6V40" stroke="#b7a16d" stroke-width="1.2"/><use href="#mg" transform="translate(570 14) scale(.85)"/><use href="#mg" transform="translate(570 27) scale(.85)"/><use href="#mg" transform="translate(570 40) scale(.85)"/></svg></div>
     </header>
     <p class="title-en stage" style="--d:.1">Engagement Ceremony</p>
-    <p class="eyebrow stage" style="--d:.25">With the blessings of God &amp; our elders</p>
+    <p class="royal-verse stage" style="--d:.18">With the grace of the Almighty<br>and the blessings of our elders</p>
     <div class="names" style="padding:0 8px">
-      <span class="spark" style="left:4%;top:6%"></span>
-      <span class="spark" style="right:6%;top:22%;animation-delay:.8s"></span>
-      <span class="spark" style="left:8%;top:58%;animation-delay:1.4s;width:11px;height:11px"></span>
-      <span class="spark" style="right:3%;top:80%;animation-delay:.4s"></span>
+      <div class="name-rule stage" style="--d:.35" aria-hidden="true"></div>
       <h1 class="stage" style="--d:.4">Bhuvaneesh</h1>
+      <div class="name-rule stage" style="--d:.48" aria-hidden="true"></div>
       <div class="amp stage" style="--d:.55">&amp;</div>
+      <div class="name-rule stage" style="--d:.60" aria-hidden="true"></div>
       <h1 class="stage" style="--d:.65">Sandhiya</h1>
+      <div class="name-rule stage" style="--d:.72" aria-hidden="true"></div>
     </div>
     <p class="subtitle stage" style="font-size:15px;margin:18px auto 8px;--d:.8">
       We invite you to join us as two families come together<br>to celebrate a beautiful new beginning.
@@ -684,7 +747,7 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
     </div>
     <div class="family-connector reveal">✦</div>
     <div class="family-card reveal">
-      <div class="family-ring"><svg viewBox="0 0 40 40" width="32" height="32" aria-hidden="true"><use href="#lotus" transform="translate(20 20) scale(1.1)"/></svg></div>
+      <div class="family-ring"><svg viewBox="0 0 40 40" width="32" height="32" aria-hidden="true"><use href="#lotus" transform="translate(20 25) scale(1.1)"/></svg></div>
       <span class="role">The Bride</span>
       <p class="name-big">Sandhiya</p>
       <div class="parents">
@@ -701,25 +764,29 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
   <div class="date-section-inner">
     <p class="eyebrow reveal">Save the date</p>
     <h2 class="reveal">Mark your <em>calendar</em></h2>
-    <div class="cal-card reveal" aria-label="November 2026 calendar showing the 22nd highlighted">
-      <div class="cal-month-header">November · 2026</div>
-      <div class="cal-grid" aria-hidden="true">
-        <span class="dow">Sun</span><span class="dow">Mon</span><span class="dow">Tue</span>
-        <span class="dow">Wed</span><span class="dow">Thu</span><span class="dow">Fri</span><span class="dow">Sat</span>
-        <span class="d muted"></span><span class="d muted"></span><span class="d muted"></span><span class="d muted"></span><span class="d muted"></span><span class="d muted"></span><span class="d">1</span>
-        <span class="d">2</span><span class="d">3</span><span class="d">4</span><span class="d">5</span><span class="d">6</span><span class="d">7</span><span class="d">8</span>
-        <span class="d">9</span><span class="d">10</span><span class="d">11</span><span class="d">12</span><span class="d">13</span><span class="d">14</span><span class="d">15</span>
-        <span class="d">16</span><span class="d">17</span><span class="d">18</span><span class="d">19</span><span class="d">20</span><span class="d">21</span><span class="d today" aria-label="22nd, engagement day" id="dayNum">22</span>
-        <span class="d">23</span><span class="d">24</span><span class="d">25</span><span class="d">26</span><span class="d">27</span><span class="d">28</span><span class="d">29</span>
-        <span class="d">30</span>
+    <div class="date-hero reveal" aria-label="Engagement date: 22 November 2026">
+      <div class="date-hero-month">November</div>
+      <div class="date-hero-arc" aria-hidden="true">
+        <svg viewBox="0 0 280 30" width="280" height="30">
+          <path id="arc" d="M20,28 Q140,-10 260,28" fill="none"/>
+          <text font-family="Cinzel,serif" font-size="11" fill="#8a6010" letter-spacing="6">
+            <textPath href="#arc" startOffset="50%" text-anchor="middle">· SUNDAY · 2026 ·</textPath>
+          </text>
+        </svg>
       </div>
-      <div class="postcard-divider"></div>
-      <div class="cal-time">
-        <div class="clock-icon" aria-hidden="true">⏰</div>
-        <div class="time-text">
-          <strong>10:30 AM</strong>
-          <span>Sunday, 22 November 2026</span>
-        </div>
+      <div class="date-hero-num" id="dayNum">22</div>
+      <div class="date-hero-divider" aria-hidden="true">
+        <svg viewBox="0 0 260 16" width="260" height="16">
+          <line x1="0" y1="8" x2="95" y2="8" stroke="url(#fgrad)" stroke-width="1"/>
+          <circle cx="130" cy="8" r="4" fill="#d4a843"/>
+          <circle cx="118" cy="8" r="2" fill="#d4a843" opacity=".6"/>
+          <circle cx="142" cy="8" r="2" fill="#d4a843" opacity=".6"/>
+          <line x1="165" y1="8" x2="260" y2="8" stroke="url(#fgrad2)" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="date-hero-time">
+        <span class="date-hero-clock">10:30 AM</span>
+        <span class="date-hero-sub">Rangalaya Marriage Hall, Ambur</span>
       </div>
     </div>
   </div>
@@ -731,6 +798,68 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
   <div class="venue-section-inner">
     <p class="eyebrow reveal">Where the celebration awaits</p>
     <h2 class="reveal">Find us <em>here</em></h2>
+    <!-- Gopuram skyline illustration -->
+    <svg class="gopuram-skyline reveal" viewBox="0 0 360 90" aria-hidden="true" style="display:block;width:min(360px,100%);margin:0 auto 20px;opacity:.9">
+      <defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0d078"/><stop offset="100%" stop-color="#c8971a"/></linearGradient></defs>
+      <!-- ground line -->
+      <line x1="0" y1="82" x2="360" y2="82" stroke="#d4a843" stroke-width=".8" opacity=".6"/>
+      <!-- far left small tower -->
+      <rect x="8" y="70" width="22" height="12" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <rect x="10" y="62" width="18" height="8" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <rect x="12" y="55" width="14" height="7" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <path d="M13 55 Q19 44 25 55Z" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <ellipse cx="16.5" cy="48" rx="1.4" ry="2" fill="#f0d078" stroke="#8a5a14" stroke-width=".4"/>
+      <ellipse cx="19" cy="45" rx="1.4" ry="2" fill="#f0d078" stroke="#8a5a14" stroke-width=".4"/>
+      <ellipse cx="21.5" cy="48" rx="1.4" ry="2" fill="#f0d078" stroke="#8a5a14" stroke-width=".4"/>
+      <rect x="15" y="70" width="8" height="12" rx="0" fill="#5c1738"/>
+      <!-- left medium tower -->
+      <rect x="42" y="68" width="34" height="14" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <rect x="44" y="58" width="30" height="10" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <rect x="47" y="49" width="24" height="9" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <rect x="50" y="40" width="18" height="9" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <path d="M50 40 Q59 26 68 40Z" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <ellipse cx="54" cy="31" rx="1.8" ry="2.6" fill="#f0d078" stroke="#8a5a14" stroke-width=".5"/>
+      <ellipse cx="59" cy="27" rx="1.8" ry="2.6" fill="#f0d078" stroke="#8a5a14" stroke-width=".5"/>
+      <ellipse cx="64" cy="31" rx="1.8" ry="2.6" fill="#f0d078" stroke="#8a5a14" stroke-width=".5"/>
+      <rect x="51" y="65" width="16" height="17" rx="0" fill="#5c1738"/>
+      <!-- centre TALL tower -->
+      <rect x="132" y="66" width="96" height="16" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <rect x="137" y="54" width="86" height="12" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <rect x="143" y="43" width="74" height="11" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <rect x="149" y="33" width="62" height="10" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <rect x="155" y="24" width="50" height="9" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <rect x="161" y="16" width="38" height="8" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <rect x="167" y="9" width="26" height="7" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <path d="M168 9 Q180 -4 192 9Z" fill="url(#gg)" stroke="#8a5a14" stroke-width=".7"/>
+      <ellipse cx="172" cy="2" rx="2.2" ry="3" fill="#f0d078" stroke="#8a5a14" stroke-width=".6"/>
+      <ellipse cx="180" cy="-2" rx="2.2" ry="3" fill="#f0d078" stroke="#8a5a14" stroke-width=".6"/>
+      <ellipse cx="188" cy="2" rx="2.2" ry="3" fill="#f0d078" stroke="#8a5a14" stroke-width=".6"/>
+      <rect x="160" y="62" width="40" height="20" rx="0" fill="#5c1738"/>
+      <!-- windows on centre -->
+      <rect x="140" y="56" width="4" height="5" rx="1" fill="#7a4a1d" opacity=".7"/>
+      <rect x="216" y="56" width="4" height="5" rx="1" fill="#7a4a1d" opacity=".7"/>
+      <rect x="147" y="46" width="4" height="5" rx="1" fill="#7a4a1d" opacity=".6"/>
+      <rect x="209" y="46" width="4" height="5" rx="1" fill="#7a4a1d" opacity=".6"/>
+      <!-- right medium tower -->
+      <rect x="284" y="68" width="34" height="14" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <rect x="286" y="58" width="30" height="10" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <rect x="289" y="49" width="24" height="9" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <rect x="292" y="40" width="18" height="9" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <path d="M292 40 Q301 26 310 40Z" fill="url(#gg)" stroke="#8a5a14" stroke-width=".6"/>
+      <ellipse cx="296" cy="31" rx="1.8" ry="2.6" fill="#f0d078" stroke="#8a5a14" stroke-width=".5"/>
+      <ellipse cx="301" cy="27" rx="1.8" ry="2.6" fill="#f0d078" stroke="#8a5a14" stroke-width=".5"/>
+      <ellipse cx="306" cy="31" rx="1.8" ry="2.6" fill="#f0d078" stroke="#8a5a14" stroke-width=".5"/>
+      <rect x="293" y="65" width="16" height="17" rx="0" fill="#5c1738"/>
+      <!-- far right small tower -->
+      <rect x="330" y="70" width="22" height="12" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <rect x="332" y="62" width="18" height="8" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <rect x="334" y="55" width="14" height="7" rx="1" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <path d="M335 55 Q341 44 347 55Z" fill="url(#gg)" stroke="#8a5a14" stroke-width=".5"/>
+      <ellipse cx="338.5" cy="48" rx="1.4" ry="2" fill="#f0d078" stroke="#8a5a14" stroke-width=".4"/>
+      <ellipse cx="341" cy="45" rx="1.4" ry="2" fill="#f0d078" stroke="#8a5a14" stroke-width=".4"/>
+      <ellipse cx="343.5" cy="48" rx="1.4" ry="2" fill="#f0d078" stroke="#8a5a14" stroke-width=".4"/>
+      <rect x="337" y="70" width="8" height="12" rx="0" fill="#5c1738"/>
+    </svg>
     <div class="postcard reveal" role="region" aria-label="Venue details postcard">
       <div class="postcard-stamp" aria-hidden="true">
         <!-- mini gopuram stamp -->
@@ -780,6 +909,11 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
 <!-- ══ SECTION 5: COUNTDOWN + BLESSINGS ══ -->
 <section class="sec-panel sec-bless" id="sec-count" aria-label="Countdown and blessings">
   <div class="bless-inner">
+    <!-- kolam corner ornaments -->
+    <div class="kolam-corners" aria-hidden="true">
+      <svg class="kc tl" viewBox="0 0 60 60" width="50" height="50"><path d="M2 58 Q2 2 58 2" fill="none" stroke="#d4a843" stroke-width="1" opacity=".4"/><path d="M8 58 Q8 8 58 8" fill="none" stroke="#d4a843" stroke-width=".5" opacity=".3"/><circle cx="8" cy="8" r="2.5" fill="#d4a843" opacity=".6"/><circle cx="20" cy="6" r="1.5" fill="#d4a843" opacity=".4"/><circle cx="6" cy="20" r="1.5" fill="#d4a843" opacity=".4"/></svg>
+      <svg class="kc tr" viewBox="0 0 60 60" width="50" height="50" style="transform:scaleX(-1)"><path d="M2 58 Q2 2 58 2" fill="none" stroke="#d4a843" stroke-width="1" opacity=".4"/><path d="M8 58 Q8 8 58 8" fill="none" stroke="#d4a843" stroke-width=".5" opacity=".3"/><circle cx="8" cy="8" r="2.5" fill="#d4a843" opacity=".6"/><circle cx="20" cy="6" r="1.5" fill="#d4a843" opacity=".4"/><circle cx="6" cy="20" r="1.5" fill="#d4a843" opacity=".4"/></svg>
+    </div>
     <p class="eyebrow reveal">Counting down to a beautiful new beginning</p>
     <h2 class="reveal"><strong>Bhuvaneesh &amp; Sandhiya</strong><br>take their first step together</h2>
     <section class="reveal" aria-live="polite" aria-label="Live countdown">
@@ -803,21 +937,80 @@ html.sealed .stage{opacity:0;transform:translateY(20px)}
       </svg>
     </div>
     <p class="final-names reveal">✦ &nbsp; Bhuvaneesh &amp; Sandhiya &nbsp; ✦</p>
+    <!-- Wax seal -->
+    <div class="wax-seal reveal" aria-hidden="true">
+      <svg viewBox="0 0 120 120" width="100" height="100">
+        <defs>
+          <radialGradient id="waxg" cx="38%" cy="32%">
+            <stop offset="0%" stop-color="#9b1c42"/>
+            <stop offset="50%" stop-color="#6a0c2e"/>
+            <stop offset="100%" stop-color="#2a041a"/>
+          </radialGradient>
+        </defs>
+        <!-- outer ring -->
+        <circle cx="60" cy="60" r="56" fill="none" stroke="#d4a843" stroke-width="1.2"/>
+        <!-- seal body -->
+        <circle cx="60" cy="60" r="50" fill="url(#waxg)"/>
+        <!-- star points -->
+        <polygon points="60,10 63,50 60,54 57,50" fill="#c8971a" opacity=".5"/>
+        <polygon points="60,110 63,70 60,66 57,70" fill="#c8971a" opacity=".5"/>
+        <polygon points="10,60 50,63 54,60 50,57" fill="#c8971a" opacity=".5"/>
+        <polygon points="110,60 70,63 66,60 70,57" fill="#c8971a" opacity=".5"/>
+        <polygon points="25,25 52,52 54,56 50,54" fill="#c8971a" opacity=".35"/>
+        <polygon points="95,95 68,68 66,64 70,66" fill="#c8971a" opacity=".35"/>
+        <polygon points="95,25 68,52 64,54 66,50" fill="#c8971a" opacity=".35"/>
+        <polygon points="25,95 52,68 56,66 54,70" fill="#c8971a" opacity=".35"/>
+        <!-- inner dashed ring -->
+        <circle cx="60" cy="60" r="38" fill="none" stroke="#f0d07855" stroke-width="1" stroke-dasharray="2 3"/>
+        <!-- monogram -->
+        <text x="60" y="56" text-anchor="middle" font-family="Cinzel,serif" font-size="16" fill="#f0d078" letter-spacing="2">B&amp;S</text>
+        <text x="60" y="70" text-anchor="middle" font-family="Cinzel,serif" font-size="7" fill="#d4a84399" letter-spacing="3">2026</text>
+        <!-- outer dots -->
+        <circle cx="60" cy="6" r="2" fill="#d4a843"/>
+        <circle cx="114" cy="60" r="2" fill="#d4a843"/>
+        <circle cx="60" cy="114" r="2" fill="#d4a843"/>
+        <circle cx="6" cy="60" r="2" fill="#d4a843"/>
+      </svg>
+    </div>
   </div>
 </section>
 </main>
 <script>
-// ── STARFIELD ──
+// ── STARFIELD WITH CONSTELLATIONS ──
 (function(){
   const c=document.getElementById("stars"),ctx=c.getContext("2d");
-  let W,H,stars=[];
-  function resize(){W=c.width=innerWidth;H=c.height=innerHeight;stars=[];
-    for(let i=0;i<180;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.4+.3,s:Math.random()*2+1,t:Math.random()*Math.PI*2})
+  let W,H,stars=[],lines=[];
+  const CONSTELLATIONS=[
+    [[.08,.12],[.14,.18],[.22,.14],[.18,.22],[.12,.28]],
+    [[.75,.08],[.82,.14],[.88,.10],[.84,.20],[.78,.18]],
+    [[.45,.06],[.52,.10],[.58,.06],[.54,.16],[.48,.20]],
+    [[.20,.72],[.28,.68],[.34,.74],[.30,.80],[.22,.78]],
+    [[.65,.70],[.72,.66],[.78,.72],[.74,.80],[.68,.76]],
+    [[.88,.50],[.92,.44],[.96,.50],[.92,.56]],
+  ];
+  function resize(){
+    W=c.width=innerWidth;H=c.height=innerHeight;
+    stars=[];lines=[];
+    for(let i=0;i<220;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.2+.2,t:Math.random()*Math.PI*2,sp:0.008+Math.random()*.016});
+    CONSTELLATIONS.forEach(pts=>{
+      const mapped=pts.map(p=>({x:p[0]*W,y:p[1]*H}));
+      for(let i=0;i<mapped.length-1;i++)lines.push([mapped[i],mapped[i+1]]);
+      mapped.forEach(p=>stars.push({x:p.x,y:p.y,r:1.6,t:Math.random()*Math.PI*2,sp:.006,bright:true}));
+    });
   }
   addEventListener("resize",resize);resize();
-  (function loop(){requestAnimationFrame(loop);ctx.clearRect(0,0,W,H);
-    stars.forEach(s=>{s.t+=.012;const a=.3+.7*Math.abs(Math.sin(s.t));
-      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(240,208,120,${a})`;ctx.fill()})
+  (function loop(){
+    requestAnimationFrame(loop);ctx.clearRect(0,0,W,H);
+    // draw constellation lines
+    ctx.strokeStyle="rgba(212,168,67,0.12)";ctx.lineWidth=.6;
+    lines.forEach(([a,b])=>{ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()});
+    // draw stars
+    stars.forEach(s=>{
+      s.t+=s.sp;
+      const a=s.bright?(0.5+0.5*Math.abs(Math.sin(s.t))):(0.2+0.6*Math.abs(Math.sin(s.t)));
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(240,208,120,${a})`;ctx.fill();
+    });
   })()
 })();
 
@@ -906,11 +1099,27 @@ document.getElementById("omBtn").addEventListener("click",()=>{const r=document.
  bgm.addEventListener("play",()=>setState(true));
  bgm.addEventListener("pause",()=>setState(false));
  btn.addEventListener("click",()=>{
-  scr.classList.add("open");
-  const p=bgm.play();if(p&&p.catch)p.catch(()=>{});
-  mute.classList.add("show");
-  setTimeout(()=>{root.classList.remove("sealed");const o=document.getElementById("omBtn");if(o)o.click()},900);
-  setTimeout(()=>scr.remove(),1900);
+  // Mandala bloom burst
+  const rect=btn.getBoundingClientRect();
+  const cx=rect.left+rect.width/2, cy=rect.top+rect.height/2;
+  const cols=["#d4a843","#f0d078","#fff2b0","#c8971a","#9b1c42"];
+  for(let i=0;i<24;i++){
+    const el=document.createElement("span");
+    el.style.cssText=`position:fixed;z-index:60;pointer-events:none;width:8px;height:8px;border-radius:50%;background:${cols[i%5]};left:${cx}px;top:${cy}px`;
+    document.body.appendChild(el);
+    const angle=(i/24)*Math.PI*2, dist=80+Math.random()*120;
+    el.animate([
+      {transform:"translate(-50%,-50%) scale(1)",opacity:1},
+      {transform:`translate(calc(-50% + ${Math.cos(angle)*dist}px), calc(-50% + ${Math.sin(angle)*dist}px)) scale(0)`,opacity:0}
+    ],{duration:700+Math.random()*400,easing:"cubic-bezier(.2,.8,.4,1)",delay:i*12}).onfinish=()=>el.remove();
+  }
+  setTimeout(()=>{
+    scr.classList.add("open");
+    const p=bgm.play();if(p&&p.catch)p.catch(()=>{});
+    mute.classList.add("show");
+    setTimeout(()=>{root.classList.remove("sealed");const o=document.getElementById("omBtn");if(o)o.click()},900);
+    setTimeout(()=>scr.remove(),1900);
+  },200);
  });
  mute.addEventListener("click",()=>{if(bgm.paused)bgm.play();else bgm.pause()});
 })();
